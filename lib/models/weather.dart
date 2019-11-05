@@ -2,7 +2,7 @@ class Weather {
   Weather(this._temperature, this._locationName, this._iconUrl);
 
   Weather.fromJson(Map<String, dynamic> json)
-    :_temperature = json['main']['temp'],
+    :_temperature = json['main']['temp'].toDouble(),
      _locationName = json['name'],
      _iconUrl = _generateIconUrl(json['weather'][0]['icon']);
 
